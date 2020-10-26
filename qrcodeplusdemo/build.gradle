@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.m2x.qrcodeplusdemo"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 3
+        versionName "1.0.2"
+    }
+
+    signingConfigs {
+//        release {
+//            keyAlias RELEASE_KEYSTORE_ALIAS
+//            keyPassword RELEASE_KEY_PASSWORD
+//            storeFile file(RELEASE_KEYSTORE_PATH)
+//            storePassword RELEASE_KEYSTORE_PASSWORD
+//        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            //signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':core')
+}

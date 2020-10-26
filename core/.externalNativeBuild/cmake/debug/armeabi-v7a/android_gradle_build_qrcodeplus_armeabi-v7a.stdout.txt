@@ -1,0 +1,76 @@
+[1/5] Building C object CMakeFiles/qrcodeplus.dir/denoise.c.o
+[2/5] Building C object CMakeFiles/qrcodeplus.dir/globalhistogrambinarizer.c.o
+[3/5] Building C object CMakeFiles/qrcodeplus.dir/hybridbinarizer.c.o
+[4/5] Building C object CMakeFiles/qrcodeplus.dir/qrcodeplus.c.o
+D:\wyds\qrcodeplus\core\src\main\cpp\hybridbinarizer.c:17:25: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned int)' [-Wimplicit-function-declaration]
+    int** blackPoints = malloc(subHeight * sizeof(int*));
+                        ^
+D:\wyds\qrcodeplus\core\src\main\cpp\hybridbinarizer.c:17:25: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+D:\wyds\qrcodeplus\core\src\main\cpp\hybridbinarizer.c:149:9: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+        free(blackPoints[i]);
+        ^
+D:\wyds\qrcodeplus\core\src\main\cpp\hybridbinarizer.c:151:5: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+    free(blackPoints);
+    ^
+3 warnings generated.
+D:\wyds\qrcodeplus\core\src\main\cpp\denoise.c:13:26: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned int)' [-Wimplicit-function-declaration]
+    unsigned char* dst = malloc(sizeof(unsigned char) * width * height);
+                         ^
+D:\wyds\qrcodeplus\core\src\main\cpp\denoise.c:13:26: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+D:\wyds\qrcodeplus\core\src\main\cpp\denoise.c:56:5: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned int)' [-Wimplicit-function-declaration]
+    memcpy(src, dst, sizeof(unsigned char) * width * height);
+    ^
+D:\wyds\qrcodeplus\core\src\main\cpp\denoise.c:56:5: note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+D:\wyds\qrcodeplus\core\src\main\cpp\denoise.c:57:5: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+    free(dst);
+    ^
+3 warnings generated.
+D:\wyds\qrcodeplus\core\src\main\cpp\globalhistogrambinarizer.c:73:5: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned int)' [-Wimplicit-function-declaration]
+    memset(buckets, 0, sizeof(int) * LUMINANCE_BUCKETS);
+    ^
+D:\wyds\qrcodeplus\core\src\main\cpp\globalhistogrambinarizer.c:73:5: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+1 warning generated.
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:101:15: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    downscale(srcBuffer, width, height, dstBuffer);
+              ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:38:26: note: passing argument to parameter 'src' here
+downscale(unsigned char* src, int width, int height, unsigned char* dst) {
+                         ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:101:41: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    downscale(srcBuffer, width, height, dstBuffer);
+                                        ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:38:69: note: passing argument to parameter 'dst' here
+downscale(unsigned char* src, int width, int height, unsigned char* dst) {
+                                                                    ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:118:23: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    increase_contrast(srcBuffer, width, height);
+                      ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:52:34: note: passing argument to parameter 'data' here
+increase_contrast(unsigned char* data, int width, int height) {
+                                 ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:139:46: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    int** blackpoints = calculateBlackPoints(luminance, subWidth, subHeight, width, height);
+                                             ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp/hybridbinarizer.h:4:43: note: passing argument to parameter 'luminances' here
+int** calculateBlackPoints(unsigned char* luminances, int subWidth, int subHeight, int width, int height);
+                                          ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:188:32: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    calculateThresholdForBlock(luminance, subWidth, subHeight, width, height, scaleFactor, matrixBits);
+                               ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp/hybridbinarizer.h:6:48: note: passing argument to parameter 'luminances' here
+void calculateThresholdForBlock(unsigned char* luminances, int subWidth, int subHeight, int width, int height, float scaleFactor, int* matrix);
+                                               ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:208:30: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    globalHistogramThreshold(luminance, width, height, matrixBits);
+                             ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp/globalhistogrambinarizer.h:4:46: note: passing argument to parameter 'luminance' here
+void globalHistogramThreshold(unsigned char* luminance, int width, int height, int* bitMatrix);
+                                             ^
+D:\wyds\qrcodeplus\core\src\main\cpp\qrcodeplus.c:224:16: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    medianBlur(srcBuffer, width, height);
+               ^~~~~~~~~
+D:\wyds\qrcodeplus\core\src\main\cpp/denoise.h:4:32: note: passing argument to parameter 'src' here
+void medianBlur(unsigned char* src, int width, int height);
+                               ^
+7 warnings generated.
+[5/5] Linking C shared library D:\wyds\qrcodeplus\core\build\intermediates\cmake\debug\obj\armeabi-v7a\libqrcodeplus.so

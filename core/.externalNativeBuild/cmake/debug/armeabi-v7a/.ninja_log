@@ -1,0 +1,6 @@
+# ninja log v5
+25	493	0	CMakeFiles/qrcodeplus.dir/hybridbinarizer.c.o	1fe30a59fa53e124
+1	494	0	CMakeFiles/qrcodeplus.dir/denoise.c.o	a95d6f3127e22235
+16	495	0	CMakeFiles/qrcodeplus.dir/globalhistogrambinarizer.c.o	9b6f5378f2e68d97
+34	500	0	CMakeFiles/qrcodeplus.dir/qrcodeplus.c.o	e9b543de7313f404
+500	886	0	D:/wyds/qrcodeplus/core/build/intermediates/cmake/debug/obj/armeabi-v7a/libqrcodeplus.so	23e8cf0963b3d51d

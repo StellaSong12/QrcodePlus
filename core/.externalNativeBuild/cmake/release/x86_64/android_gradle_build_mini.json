@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "D:\\wyds\\qrcodeplus\\core\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\N13494\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\wyds\\qrcodeplus\\core\\.externalNativeBuild\\cmake\\release\\x86_64 --target clean"
+  ],
+  "libraries": {
+    "qrcodeplus-Release-x86_64": {
+      "artifactName": "qrcodeplus",
+      "buildCommand": "C:\\Users\\N13494\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\wyds\\qrcodeplus\\core\\.externalNativeBuild\\cmake\\release\\x86_64 --target qrcodeplus",
+      "abi": "x86_64",
+      "output": "D:\\wyds\\qrcodeplus\\core\\build\\intermediates\\cmake\\release\\obj\\x86_64\\libqrcodeplus.so"
+    }
+  }
+}
